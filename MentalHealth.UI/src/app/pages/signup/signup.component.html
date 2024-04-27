@@ -1,0 +1,10 @@
+<div class="signup-container">
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+    <input type="text" formControlName="username" placeholder="Username" class="form-input">
+    <input type="email" formControlName="email" placeholder="Email" class="form-input">
+    <input type="text" formControlName="profileImage" placeholder="Profile Image URL" class="form-input">
+    <input type="password" formControlName="password" placeholder="Password" class="form-input">
+    <button type="submit" class="submit-btn">Signup</button>
+  </form>
+  <button (click)="navigateToLogin()" class="navigate-btn">Go to Login</button>
+</div>

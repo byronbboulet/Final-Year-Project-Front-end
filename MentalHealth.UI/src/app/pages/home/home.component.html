@@ -1,0 +1,34 @@
+<!-- Button for creating new post activated, calls initNewPost() when button clicked -->
+<div class="button-container">
+  <button (click)="initNewPost()" class="create-btn">Create New Post</button>
+  <!-- passes the post to edit-post.component using the [post]="postToEdit"-->
+  <!-- Angular detects the change and passes the post object to EditPostComponent 
+  via the (postUpdated)="updatePostList($event)" binding. --> 
+  <app-edit-post [post]="postToEdit" (postUpdated)="updatePostList($event)"></app-edit-post>
+
+  <!--
+    look at components edit-post and post-list for more details
+  -->
+</div>
+
+<!-- post-item.component.html -->
+<div class="post-container grid-container">
+  <!-- Loop through posts -->
+  <div class="card" *ngFor="let post of posts">
+    <img src="{{ post.postMediaUri }}" alt="Profile image" class="post-img">
+    <div class="card-header">
+      <img src="{{ post.profileImage }}" alt="Profile image" class="profile-img">
+      <div class="post-info">
+        <h5 class="post-title">{{ post.postTitle }}</h5>
+        <p class="post-username"><small>{{ post.username }}</small></p>
+      </div>
+      <button class="edit-btn" (click)="editPost(post)">Edit</button>
+    </div>
+    <div class="card-body">
+      <p class="post-label">{{ post.postLabel }}</p>
+      <p class="post-time"><small>Last updated {{ post.postTime | date:'dd/MM/yyyy' }}</small></p>
+    </div>
+  </div>
+</div>
+
+

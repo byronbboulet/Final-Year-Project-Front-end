@@ -1,0 +1,25 @@
+<div *ngIf="post" class="post-container">
+    <!--whatever is written here is stores the data in the attribute postTitle in post for the parameter for createPost on line 44 in edit-post-->
+    <div class="input-group">
+      <label>Title:</label>
+      <input [(ngModel)]="post.postTitle" placeholder="Title" class="form-input" />
+    </div>
+    <!--whatever is written here is stores the data in the attribute postLabel in post for the parameter for createPost on line 44 in edit-post-->  
+    <div class="input-group">
+      <label>Label:</label>
+      <input [(ngModel)]="post.postLabel" placeholder="Label" class="form-input" />
+    </div>
+    <!--whatever is written here is stores the data in the attribute postMediaUri in post for the parameter for createPost on line 44 in edit-post-->  
+    <div class="input-group">
+      <label>Image:</label>
+      <input [(ngModel)]="post.postMediaUri" placeholder="Image" class="form-input" />
+    </div>
+    <div class="button-group">
+      <!-- Triggers updatePost in edit-post.component.ts and passes post data-->
+      <button (click)="updatePost(post)" *ngIf="post.id" class="btn save-btn">Save</button>
+      <!-- Triggers deletePost in edit-post.component.ts-->
+      <button (click)="deletePost(post)" *ngIf="post.id" class="btn delete-btn">Delete</button>
+      <!-- Triggers createPost in edit-post.component.ts-->
+      <button (click)="createPost(post)" *ngIf="!post.id" class="btn create-btn">Create</button>
+    </div>
+  </div>

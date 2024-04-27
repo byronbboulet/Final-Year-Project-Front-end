@@ -1,0 +1,11 @@
+<div class="tutorials-container">
+    <div *ngFor="let tutorial of tutorials" class="tutorial">
+        <video controls width="100%">
+            <source [src]="tutorial.url" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        <h2>{{ tutorial.title }}</h2>
+      <p>{{ tutorial.description }}</p>
+    </div>
+  </div>
+  

@@ -1,0 +1,48 @@
+.app {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A more modern font family */
+  }
+  
+  
+  header {
+    background-color: #702963; /* Dark background for contrast */
+    padding: 20px 0;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  header nav ul li {
+    display: inline;
+    margin-right: 15px; /* Increased spacing for better legibility */
+    margin-left: 15px;
+  }
+  
+  header nav ul li a {
+    color: #f0f0f0; /* Lighter color for readability */
+    text-decoration: none;
+    padding: 10px 20px; /* Larger padding for a bigger clickable area */
+    font-size: 22px; /* Larger font size for better visibility */
+    font-weight: 600; /* Bolder font for emphasis */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header nav ul li a:hover, header nav ul li a:focus {
+    color: #ffffff; /* Brighter color on hover for contrast */
+  }
+  
+  /* Main Content Styling */
+  main {
+    padding: 20px;
+    color: #333; /* Dark grey color for main content text */
+  }
+  
+  main h4 {
+    margin-top: 0;
+    color: #444; /* Slightly lighter than the main content for differentiation */
+    font-size: 24px; /* Larger font size for section headings */
+  }
+  
